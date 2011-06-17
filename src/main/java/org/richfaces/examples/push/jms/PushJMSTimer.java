@@ -21,13 +21,13 @@ public class PushJMSTimer {
 
     private static final Logger LOGGER = Logger.getLogger(PushJMSTimer.class.getName());
 
-    @Resource(mappedName = "java:/JmsXA")
+    @Resource(mappedName="java:/ConnectionFactory")
     private ConnectionFactory connectionFactory;
 
     @Resource(mappedName = "topic/chat")
     private Topic topic;
 
-    @Schedule(hour = "*", minute = "*", second = "*")
+    @Schedule(hour = "*", minute = "*", second = "*/10")
     public void push() {
         TopicConnection connection = null;
         TopicSession session = null;
