@@ -11,7 +11,7 @@ public class TopicsInitializer implements SystemEventListener {
 
     public void processEvent(SystemEvent event) throws AbortProcessingException {
         TopicsContext topicsContext = TopicsContext.lookup();
-        topicsContext.getOrCreateTopic(new TopicKey("chat"));
+        topicsContext.getOrCreateTopic(new TopicKey("test"));
     }
 
     public boolean isListenerForSource(Object source) {

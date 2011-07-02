@@ -8,5 +8,9 @@
             <system-event-listener-class>org.richfaces.examples.push.jms.TopicsInitializer</system-event-listener-class>
             <system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>
         </system-event-listener>
+        <system-event-listener>
+            <system-event-listener-class>org.richfaces.examples.push.jms.JMSMessageProducerInitializer</system-event-listener-class>
+            <system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>
+        </system-event-listener>
     </application>
 </faces-config>

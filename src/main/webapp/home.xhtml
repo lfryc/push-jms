@@ -11,8 +11,16 @@
 </h:head>
 
 <h:body>
+	
+	<a4j:push id="pushTest" address="test"
+            ondataavailable="jQuery(#{rich:element('serverDate')}).text(event.rf.data)" />
 
-	<a4j:push address="chat" />
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Counter:" />
+            <a4j:outputPanel id="serverDate" layout="block">
+                <i>waiting for event...</i>
+            </a4j:outputPanel>
+        </h:panelGrid>
     
 </h:body>
 
